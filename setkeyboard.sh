@@ -4,17 +4,18 @@
 #  Can be used standalone or sourced. 
 #  Practically started from /etc/xrdp/startwm.sh and from Xsession.d 
 #
-# Environment: Ubuntu desktop width xfce4 
+# Environment: Ubuntu desktop with xfce4 
 #  
 # Parameters:
 # arg1: time (sec) to wait before the action
 #   default: 0
-#     explanation: xrdp client sends the actual kbd layout code to the server, but according the 
-#     protocol only one code, and it overrides the xface settings ~10-20 seconds later than 
-#     the session manager or the /etc/drdp/reconnectwm.sh has been started.
+#     explanation: At login/reconnect the XRDP client sends the actual kbd layout code to the server, 
+#     but according the protocol only one code can be sent. This overwrites the xface multilingual 
+#     keyboard assignment settings ~5-20 seconds after the session manager or /etc/xdrdp/reconnectwm.sh 
+#     has been started. This script restores the keyboard layout according to xfconf keyboard-layout settings.
 #
-# arg2: Full pathname of the log file. Ifit is "syslog", the syslog facility will be used. 
-#   default: standard output
+# arg2: Full pathname of the log file. If it is "syslog", the syslog facility will be used. 
+#   if no arg2 specified the standard output vill be used.
 #
 # Helpers for sourced usage:
 # save_fd_12 - saves the stdout and stderr
