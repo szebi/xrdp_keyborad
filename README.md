@@ -1,7 +1,7 @@
 # xrdp_keyborad
 Helper for keyborad layout settings (Ubuntu, xfce4)
 
-# This is a workaround for keyborad layoout probelem in Ubuntu dexktop environment using xrdp and xfce4
+### This is a workaround for keyborad layoout probelem in Ubuntu dexktop environment using xrdp and xfce4
 At login/reconnect the XRDP client sends the actual kbd layout code to the server, but according the protocol only one code can be sent. This overrides the xface kayboard-layout settings ~10-20 seconds later than the session manager or the /etc/drdp/reconnectwm.sh has been started.
 
 # Usage:
