@@ -7,6 +7,7 @@ At login/reconnect the XRDP client sends the actual kbd layout code to the serve
 # Usage:
 1. Copy this script to **/etc/xrdp/setkeyboard.sh**
 2. Make is executable (x bit)
-3. Put this to end of **/etc/xrdp/reconnectwm.sh:** ```/etc/xrdp/setkeyboard.sh 10 &```
-4. Create a file **/etc/X11/Xsession.d/98setxrdp-keyboard** with this content: ```/etc/xrdp/setkeyboard.sh 40 &```
+3. Put this to end of **/etc/xrdp/reconnectwm.sh:** ```/etc/xrdp/setkeyboard.sh 10 syslog &```
+4. Create a file **/etc/X11/Xsession.d/98setxrdp-keyboard** with this content: ```/etc/xrdp/setkeyboard.sh 40 syslog &```
+5. The timeouts may vary 
    
